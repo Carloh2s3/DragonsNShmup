@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_TemCharBlade</sprite>
     <sprite>sprites\spr_TemCharBladeSwing</sprite>
+    <sprite>sprites\spr_eff_temblades</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -15,6 +16,7 @@
     <object>objects\object0_new</object>
     <object>objects\obj_PreGame</object>
     <object>objects\obj_thing</object>
+    <object>objects\object3</object>
   </objects>
   <help>
     <rtf>help.rtf</rtf>
