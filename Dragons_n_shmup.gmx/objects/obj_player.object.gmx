@@ -33,6 +33,36 @@ skilltest = 1;
 attack = 0;
 image_speed = 0.3;
 can_attack = 0;
+hp = 100;
+mana = 50;
+alarm[0] = 10;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if mana &lt;= 49
+{
+    mana += 1;
+    alarm[0] = 10;
+}
 </string>
           </argument>
         </arguments>
@@ -89,7 +119,7 @@ if !keyboard_check(ord("W")) and !keyboard_check(ord("S")) {vspeed = 0}
             <kind>1</kind>
             <string>if mouse_check_button(mb_left){
     if attack = 0 and can_attack = 0{
-        ID = instance_create(x,y,obj_slash).image_xscale = -1;
+        with instance_create(x,y,obj_slash) image_xscale = -1;
         sprite_index = spr_TemCharBladeSwing;
         image_speed = 0.7;
         image_index = 0;
@@ -97,7 +127,7 @@ if !keyboard_check(ord("W")) and !keyboard_check(ord("S")) {vspeed = 0}
         can_attack = 10;
     }
     if attack = 1 and can_attack = 0{
-        ID = instance_create(x,y,obj_slash).image_xscale = 1;
+        with instance_create(x,y,obj_slash) image_xscale = 1;
         sprite_index = spr_TemCharBladeSwing;
         image_speed = 0.7;
         image_index = 5;
@@ -151,5 +181,8 @@ if can_attack &gt; 0 can_attack -= 1;
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>64,48</point>
+    <point>64,64</point>
+  </PhysicsShapePoints>
 </object>

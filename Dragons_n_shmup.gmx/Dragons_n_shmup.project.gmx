@@ -9,15 +9,26 @@
     <sprite>sprites\spr_TemCharBlade</sprite>
     <sprite>sprites\spr_TemCharBladeSwing</sprite>
     <sprite>sprites\spr_eff_temblades</sprite>
+    <sprite>sprites\spr_slash</sprite>
+    <sprite>sprites\spr_bdisk</sprite>
+    <sprite>sprites\spr_hud</sprite>
+    <sprite>sprites\spr_skill</sprite>
+    <sprite>sprites\sprite7</sprite>
+    <sprite>sprites\spr_hud_meter</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\object0_new</object>
+    <object>objects\obj_player</object>
     <object>objects\obj_PreGame</object>
     <object>objects\obj_thing</object>
-    <object>objects\object3</object>
+    <object>objects\obj_slash</object>
+    <object>objects\obj_bdisk</object>
+    <object>objects\obj_controller</object>
   </objects>
+  <rooms name="rooms">
+    <room>rooms\room0</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
